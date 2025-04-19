@@ -1,0 +1,70 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP1rPukP6PQr3D5wEmKCgQp",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hruthish7/character-frequency-map-set-python/blob/main/Character-frequency%20map%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k2z8hAKhUBRt",
+        "outputId": "b60f28de-f3f7-4e53-e3a3-0dc668e9a459"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a word: bamboo\n",
+            "List of characters: ['b', 'a', 'm', 'b', 'o', 'o']\n",
+            "Unique characters (set): {'a', 'o', 'm', 'b'}\n",
+            "Unique characters (list): ['a', 'o', 'm', 'b']\n",
+            "[('a', 1), ('o', 2), ('m', 1), ('b', 2)]\n"
+          ]
+        }
+      ],
+      "source": [
+        "x = input('Enter a word: ')\n",
+        "a = list(x)\n",
+        "print(\"List of characters:\", a)\n",
+        "\n",
+        "y = set(a)\n",
+        "print(\"Unique characters (set):\", y)\n",
+        "\n",
+        "z = list(y)\n",
+        "print(\"Unique characters (list):\", z)\n",
+        "\n",
+        "\n",
+        "# Character frequency using map (set ensures uniqueness)\n",
+        "freq_values = list(map(lambda c: (c, a.count(c)), z))\n",
+        "print(freq_values)\n"
+      ]
+    }
+  ]
+}
